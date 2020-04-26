@@ -1,0 +1,8 @@
+name: FlyPlugin
+version: 1.0
+main: com.ninjawulf98.flyplugin.FlyPlugin
+api-version: 1.13
+commands:
+  fly:
+    description: Fly free like a bird
+    usage: /<command>

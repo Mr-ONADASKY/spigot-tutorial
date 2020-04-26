@@ -1,0 +1,4 @@
+name: MongoPlugin
+version: ${project.version}
+main: com.ninjawulf98.mongoplugin.MongoPlugin
+api-version: 1.13

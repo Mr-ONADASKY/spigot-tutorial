@@ -1,0 +1,9 @@
+name: TeleportBow
+version: 1.0
+main: com.ninjawulf98.teleportbow.TeleportBow
+api-version: 1.13
+commands:
+  tpbow:
+    description: Teleport anywhere with a bow
+    usage: /<command>
+    permission: tpbow.spawnbow

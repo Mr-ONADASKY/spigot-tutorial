@@ -1,0 +1,4 @@
+com\ninjawulf98\customconfigplugin\CustomConfigPlugin.class
+com\ninjawulf98\customconfigplugin\commands\ReloadCommand.class
+com\ninjawulf98\customconfigplugin\commands\Message.class
+com\ninjawulf98\customconfigplugin\files\CustomConfig.class

@@ -1,0 +1,7 @@
+name: ArmorStands
+version: ${project.version}
+main: com.ninjawulf98.armorstands.ArmorStands
+api-version: 1.13
+commands:
+  armorstand:
+    description: Spawn an armor stand

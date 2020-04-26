@@ -1,0 +1,4 @@
+name: MongoPlugin
+version: 1.0
+main: com.ninjawulf98.mongoplugin.MongoPlugin
+api-version: 1.13

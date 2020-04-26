@@ -1,0 +1,7 @@
+name: Signs
+version: 1.0
+main: com.ninjawulf98.sign.Signs
+api-version: 1.13
+commands:
+  sign:
+    description: Spawns a sign

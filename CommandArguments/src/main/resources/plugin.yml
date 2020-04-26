@@ -1,0 +1,9 @@
+name: CommandArguments
+version: ${project.version}
+main: com.ninjawulf98.commandarguments.CommandArguments
+api-version: 1.13
+commands:
+  sendWord:
+    description: Send the word to the player
+  kill:
+    description: Kill player

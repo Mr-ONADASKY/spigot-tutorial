@@ -1,0 +1,4 @@
+name: SpigotTutorial2
+version: ${project.version}
+main: ninjawulf98.spigottutorial2.SpigotTutorial2
+api-version: 1.13

@@ -1,0 +1,4 @@
+com\ninjawulf98\teleportbow\TeleportBow.class
+com\ninjawulf98\teleportbow\events\TeleportBowEvent.class
+com\ninjawulf98\teleportbow\commands\TeleportBowCommand.class
+com\ninjawulf98\teleportbow\events\SpawnEvent.class

@@ -1,0 +1,7 @@
+name: Holograms
+version: ${project.version}
+main: com.ninjawulf98.holograms.Holograms
+api-version: 1.13
+commands:
+  hologram:
+    description: Spawn a hologram

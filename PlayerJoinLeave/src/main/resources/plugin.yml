@@ -1,0 +1,4 @@
+name: PlayerJoinLeave
+version: ${project.version}
+main: com.ninjawulf98.playerjoinleave.PlayerJoinLeave
+api-version: 1.13

@@ -1,0 +1,10 @@
+create-message: '&eCreated Armor Stand'
+delete-message: '&cDeleted Armor Stand'
+confirm-option: '&AOption Confirmed'
+cancel-option: '&cOption Cancelled'
+
+#Menu Titles
+main-menu: '&1Armor stand GUI'
+create-menu: '&aCreate a Armor stand'
+confirm-menu: '&aConfirm Option'
+armor-menu: '&bChoose some Armor'

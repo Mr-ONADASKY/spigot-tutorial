@@ -1,0 +1,8 @@
+name: BanGUI
+version: ${project.version}
+main: com.ninjawulf98.bangui.BanGUI
+api-version: 1.13
+commands:
+  bangui:
+    description: Open the gui for banning players
+    usage: /<command>

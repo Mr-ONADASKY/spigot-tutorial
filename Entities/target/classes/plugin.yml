@@ -1,0 +1,4 @@
+name: Entities
+version: 1.0
+main: com.ninjawulf98.entities.Entities
+api-version: 1.13

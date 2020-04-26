@@ -1,0 +1,4 @@
+bow-name: '&f[&eTeleport&aBow&f]'
+bow-description: 'This is a bow that can teleport you wherever the arrow lands.'
+teleport-message: '&cSwoosh!'
+give-bow-on-join: true

@@ -1,0 +1,7 @@
+name: GUIMenus
+version: ${project.version}
+main: com.ninjawulf98.guimenus.GUIMenus
+api-version: 1.13
+commands:
+  gui:
+    description: Open a GUI

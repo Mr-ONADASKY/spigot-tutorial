@@ -1,0 +1,8 @@
+name: RandomTP
+version: ${project.version}
+main: com.ninjawulf98.randomtp.RandomTP
+api-version: 1.13
+commands:
+  rtp:
+    description: Randomly teleports a player to a random location
+    usage: /<command>

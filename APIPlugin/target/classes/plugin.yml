@@ -1,0 +1,5 @@
+name: APIPlugin
+version: 1.0
+main: com.ninjawulf98.apiplugin.APIPlugin
+api-version: 1.13
+depend: [ActionBarAPI]

@@ -1,0 +1,2 @@
+world-border: true #True if you want to limit how far players teleport
+border: 200

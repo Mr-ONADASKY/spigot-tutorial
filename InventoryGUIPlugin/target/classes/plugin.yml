@@ -1,0 +1,7 @@
+name: InventoryGUIPlugin
+version: 1.0-SNAPSHOT
+main: com.ninjawulf98.inventoryguiplugin.InventoryGUIPlugin
+api-version: 1.13
+commands:
+  gui:
+    description: Open a gui for the player

@@ -1,0 +1,13 @@
+name: CommandsPart2
+version: ${project.version}
+main: com.ninjawulf98.commandspart2.CommandsPart2
+api-version: 1.13
+commands:
+  god:
+      description: Become invincible
+      aliases:
+        - invincible
+  feed:
+    description: Feed your player
+    aliases:
+      - foodplease

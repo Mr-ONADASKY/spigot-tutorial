@@ -1,0 +1,9 @@
+name: VaultPlugin
+version: ${project.version}
+main: com.ninjawulf98.vaultplugin.VaultPlugin
+api-version: 1.13
+description: A plugin for a player to store their items
+commands:
+  vault:
+    description: Open a vault
+    usage: /<command>

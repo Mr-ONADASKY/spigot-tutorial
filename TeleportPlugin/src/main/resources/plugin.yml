@@ -1,0 +1,9 @@
+name: TeleportPlugin
+version: ${project.version}
+main: com.ninjawulf98.teleportplugin.TeleportPlugin
+api-version: 1.13
+commands:
+  tp:
+    description: Teleport players
+  tpall:
+    description: Teleports all the players to your location

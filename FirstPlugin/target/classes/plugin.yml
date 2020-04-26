@@ -1,0 +1,7 @@
+name: FirstPlugin
+version: 1.0-SNAPSHOT
+main: com.ninjawulf98.firstplugin.FirstPlugin
+api-version: 1.13
+authors: [ninjawulf98]
+description: First plugin from ninjawulf98
+website: ninjawulf98.com

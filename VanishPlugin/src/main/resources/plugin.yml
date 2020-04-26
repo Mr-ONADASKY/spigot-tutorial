@@ -1,0 +1,7 @@
+name: VanishPlugin
+version: ${project.version}
+main: com.ninjawulf98.vanishplugin.VanishPlugin
+api-version: 1.13
+commands:
+  vanish:
+    description: Make yourself invisble

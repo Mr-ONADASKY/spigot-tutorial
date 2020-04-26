@@ -1,0 +1,4 @@
+name: SilkTouchSpawner
+version: 1.0-SNAPSHOT
+main: com.ninjawulf98.silktouchspawner.SilkTouchSpawner
+api-version: 1.13

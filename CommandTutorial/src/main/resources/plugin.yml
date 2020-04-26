@@ -1,0 +1,12 @@
+name: CommandTutorial
+version: ${project.version}
+main: com.ninjawulf98.commandtutorial.CommandTutorial
+api-version: 1.13
+commands:
+  die:
+    description: Kill yourself
+  heal:
+    description: Here you have some health
+    aliases:
+      - helpme
+      - heart

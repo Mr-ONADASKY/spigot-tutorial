@@ -1,0 +1,4 @@
+com\ninjawulf98\silktouchspawner\listeners\BlockBreakListener.class
+com\ninjawulf98\silktouchspawner\SilkTouchSpawner.class
+com\ninjawulf98\silktouchspawner\events\SpawnerBreakEvent.class
+com\ninjawulf98\silktouchspawner\listeners\SpawnerBreakListener.class

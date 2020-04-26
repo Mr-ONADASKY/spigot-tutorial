@@ -1,0 +1,7 @@
+name: CustomEvents
+version: 1.0-SNAPSHOT
+main: com.ninjawulf98.customevents.CustomEvents
+api-version: 1.13
+commands:
+  gameover:
+    description: End a game with a winner and a loser

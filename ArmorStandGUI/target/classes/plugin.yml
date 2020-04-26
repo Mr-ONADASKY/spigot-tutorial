@@ -1,0 +1,10 @@
+name: ArmorStandGUI
+version: 1.0
+main: com.ninjawulf98.armorstandgui.ArmorStandGUI
+api-version: 1.13
+commands:
+  armorstand:
+    description: Create a armor stand
+    usage: /<command>
+    aliases:
+      - as

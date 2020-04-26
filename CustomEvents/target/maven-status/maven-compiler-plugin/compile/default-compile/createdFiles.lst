@@ -1,0 +1,4 @@
+com\ninjawulf98\customevents\listeners\GameListeners.class
+com\ninjawulf98\customevents\CustomEvents.class
+com\ninjawulf98\customevents\GameOverCommand.class
+com\ninjawulf98\customevents\events\GameEndEvent.class

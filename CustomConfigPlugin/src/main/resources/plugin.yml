@@ -1,0 +1,9 @@
+name: CustomConfigPlugin
+version: ${project.version}
+main: com.ninjawulf98.customconfigplugin.CustomConfigPlugin
+api-version: 1.13
+commands:
+  message:
+    description: Sends a message from the custom config
+  preload:
+    description: Reloads the config for the plugin

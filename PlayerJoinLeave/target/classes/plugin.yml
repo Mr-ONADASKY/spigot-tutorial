@@ -1,0 +1,4 @@
+name: PlayerJoinLeave
+version: 1.0-SNAPSHOT
+main: com.ninjawulf98.playerjoinleave.PlayerJoinLeave
+api-version: 1.13

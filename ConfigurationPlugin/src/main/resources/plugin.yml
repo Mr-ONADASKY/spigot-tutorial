@@ -1,0 +1,11 @@
+name: ConfigurationPlugin
+version: ${project.version}
+main: com.ninjawulf98.com.configurationplugin.ConfigurationPlugin
+api-version: 1.13
+commands:
+  printMessageFromConfig:
+    description: Print a message from the config
+  setFood:
+    description: Sets the food to mango
+  Explode:
+    description: Boom!
