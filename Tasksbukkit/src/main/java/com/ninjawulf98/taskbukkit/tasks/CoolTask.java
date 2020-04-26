@@ -7,14 +7,16 @@ import org.bukkit.scheduler.BukkitRunnable;
 public class CoolTask extends BukkitRunnable {
 
     TaskBukkit plugin;
+    String message;
 
-    public CoolTask(TaskBukkit plugin) {
+    public CoolTask(TaskBukkit plugin, String message) {
         this.plugin = plugin;
+        this.message = message;
     }
 
     @Override
     public void run() {
-    System.out.println("Running cool task...");
+    System.out.println(message);
     }
 
 }
