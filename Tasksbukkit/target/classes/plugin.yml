@@ -1,0 +1,4 @@
+name: Taskbukkit
+version: 1.0-SNAPSHOT
+main: com.ninjawulf98.taskbukkit.TaskBukkit
+api-version: 1.13

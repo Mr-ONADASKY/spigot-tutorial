@@ -1,0 +1,4 @@
+name: Taskbukkit
+version: ${project.version}
+main: com.ninjawulf98.taskbukkit.TaskBukkit
+api-version: 1.13
