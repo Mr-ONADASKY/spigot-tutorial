@@ -1,0 +1,4 @@
+name: CortexLobby
+version: ${project.version}
+main: com.ninjawulf98.cortexlobby.CortexLobby
+api-version: 1.13

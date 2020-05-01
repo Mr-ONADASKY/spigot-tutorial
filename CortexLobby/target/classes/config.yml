@@ -1,0 +1,11 @@
+lobby-world: 'world'
+
+#enable motd
+motd: true
+#add and remove lines as needed
+motd-message:
+  - '&d&o-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-='
+  - ''
+  - '&aWelcome to the Darpa Network'
+  - ''
+  - '&d&o-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-='

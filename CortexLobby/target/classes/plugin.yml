@@ -1,0 +1,4 @@
+name: CortexLobby
+version: 1.0-SNAPSHOT
+main: com.ninjawulf98.cortexlobby.CortexLobby
+api-version: 1.13
