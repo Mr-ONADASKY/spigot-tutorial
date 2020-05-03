@@ -1,0 +1,7 @@
+name: StaffHomes
+version: 1.0-SNAPSHOT
+main: com.ninjawulf98.staffhomes.StaffHomes
+api-version: 1.13
+commands:
+  staffhome:
+    description: The main command for setting a staffhome

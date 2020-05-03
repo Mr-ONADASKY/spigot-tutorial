@@ -1,0 +1,9 @@
+enable: true
+
+##Messages##
+set-message: '&aSetting a temporary home at: &7' #end color for coords color
+override-message: '&aOverriding current home @: &7'
+return-message: '&aReturned to former location.'
+reload-message: '&7StaffHomes configuration reloaded.'
+
+savedlocations:
