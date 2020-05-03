@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="Scoreboards:jar">
+    <output-path>$PROJECT_DIR$/../../Spigot-test-server/plugins</output-path>
+    <root id="archive" name="Scoreboards.jar">
+      <element id="module-output" name="Scoreboards" />
+    </root>
+  </artifact>
+</component>

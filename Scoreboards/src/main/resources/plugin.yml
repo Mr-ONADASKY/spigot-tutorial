@@ -1,0 +1,7 @@
+name: Scoreboards
+version: ${project.version}
+main: com.ninjawulf98.scoreboards.Scoreboards
+api-version: 1.13
+commands:
+  sb:
+    description: Open scoreboard

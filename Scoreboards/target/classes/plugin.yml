@@ -1,0 +1,7 @@
+name: Scoreboards
+version: 1.0-SNAPSHOT
+main: com.ninjawulf98.scoreboards.Scoreboards
+api-version: 1.13
+commands:
+  sb:
+    description: Open scoreboard
