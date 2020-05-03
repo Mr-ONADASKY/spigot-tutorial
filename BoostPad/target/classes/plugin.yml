@@ -1,0 +1,4 @@
+name: BoostPad
+version: 1.0-SNAPSHOT
+main: com.ninjawulf98.boostpad.BoostPad
+api-version: 1.13
