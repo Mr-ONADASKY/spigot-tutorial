@@ -1,0 +1,4 @@
+name: Mongodb
+version: 1.0-SNAPSHOT
+main: com.ninjawulf98.mongodbPlugin.MongodbPlugin
+api-version: 1.13

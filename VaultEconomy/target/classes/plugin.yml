@@ -1,0 +1,7 @@
+name: VaultEconomy
+version: 1.0-SNAPSHOT
+main: com.ninjawulf98.vaulteconomy.VaultEconomy
+api-version: 1.13
+commands:
+  bits:
+    description: balance stuff

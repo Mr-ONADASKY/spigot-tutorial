@@ -1,0 +1,11 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="MongodbPlugin:jar">
+    <output-path>$PROJECT_DIR$/../../Spigot-test-server/plugins</output-path>
+    <root id="archive" name="MongodbPlugin.jar">
+      <element id="module-output" name="MongodbPlugin" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/org/mongodb/mongodb-driver-core/4.0.2/mongodb-driver-core-4.0.2.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/org/mongodb/bson/4.0.2/bson-4.0.2.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/org/mongodb/mongodb-driver-sync/4.0.2/mongodb-driver-sync-4.0.2.jar" path-in-jar="/" />
+    </root>
+  </artifact>
+</component>

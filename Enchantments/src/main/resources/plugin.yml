@@ -1,0 +1,4 @@
+name: Enchantments
+version: ${project.version}
+main: com.ninjawulf98.enchantments.Enchantments
+api-version: 1.13

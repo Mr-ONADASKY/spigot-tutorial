@@ -1,0 +1,4 @@
+name: Enchantments
+version: 1.0-SNAPSHOT
+main: com.ninjawulf98.enchantments.Enchantments
+api-version: 1.13
