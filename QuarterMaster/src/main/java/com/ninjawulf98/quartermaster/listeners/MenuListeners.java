@@ -1,5 +1,7 @@
 package com.ninjawulf98.quartermaster.listeners;
 
+import com.ninjawulf98.quartermaster.QuarterMaster;
+import com.ninjawulf98.quartermaster.utils.LockUtils;
 import org.bukkit.ChatColor;
 import org.bukkit.Material;
 import org.bukkit.entity.Player;
@@ -22,6 +24,7 @@ public class MenuListeners implements Listener {
 
             if(e.getCurrentItem().getType().equals(Material.TOTEM_OF_UNDYING)){
                 player.sendMessage("Creating a new lock...");
+                LockUtils.createNewLock(player, QuarterMaster.Locks_being_created.get(player));
 
 
             }else if (e.getCurrentItem().getType().equals(Material.BARRIER)){

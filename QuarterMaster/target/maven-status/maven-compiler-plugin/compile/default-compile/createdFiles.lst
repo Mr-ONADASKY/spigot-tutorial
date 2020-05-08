@@ -1,3 +1,5 @@
 com/ninjawulf98/quartermaster/QuarterMaster.class
+com/ninjawulf98/quartermaster/listeners/MenuListeners.class
 com/ninjawulf98/quartermaster/commands/LockCommand.class
 com/ninjawulf98/quartermaster/utils/GUIManager.class
+com/ninjawulf98/quartermaster/utils/LockUtils.class

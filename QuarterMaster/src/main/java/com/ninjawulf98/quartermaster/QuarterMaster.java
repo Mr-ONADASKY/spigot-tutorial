@@ -1,18 +1,44 @@
 package com.ninjawulf98.quartermaster;
 
+import com.mongodb.client.MongoClient;
+import com.mongodb.client.MongoClients;
+import com.mongodb.client.MongoCollection;
+import com.mongodb.client.MongoDatabase;
 import com.ninjawulf98.quartermaster.commands.LockCommand;
+import com.ninjawulf98.quartermaster.listeners.MenuListeners;
+import org.bson.Document;
+import org.bukkit.Bukkit;
+import org.bukkit.block.Block;
+import org.bukkit.entity.Player;
 import org.bukkit.plugin.java.JavaPlugin;
+
+import java.util.HashMap;
 
 public final class QuarterMaster extends JavaPlugin {
 
+    private MongoClient mongoClient;
+    private MongoDatabase database;
+    private static MongoCollection<Document> col;
+
+    public static HashMap<Player, Block> Locks_being_created = new HashMap<>();
+
     @Override
     public void onEnable() {
-        // Plugin startup logic
+
+        mongoClient = MongoClients.create("mongodb://f2fmarket:f2fmarket@localhost:27017");
+        database = mongoClient.getDatabase("quartermaster");
+        col = database.getCollection("locks");
+
+
         getCommand("lock").setExecutor(new LockCommand());
+        Bukkit.getPluginManager().registerEvents(new MenuListeners(), this);
     }
 
     @Override
     public void onDisable() {
-        // Plugin shutdown logic
+    }
+
+    public static MongoCollection<Document> getDatabaseCollection() {
+        return col;
     }
 }
