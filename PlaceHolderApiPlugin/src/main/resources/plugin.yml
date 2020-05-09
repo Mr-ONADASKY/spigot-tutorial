@@ -1,0 +1,8 @@
+name: PlaceHolderApiPlugin
+version: ${project.version}
+main: com.ninjawulf98.placeholderapiplugin.PlaceHolderApiPlugin
+api-version: 1.13
+softdepend:
+  - PlaceHolderAPI
+commands:
+  test:
