@@ -1,6 +1,7 @@
 package com.ninjawulf98.quartermaster.listeners;
 
 import com.ninjawulf98.quartermaster.QuarterMaster;
+import com.ninjawulf98.quartermaster.utils.GUIManager;
 import com.ninjawulf98.quartermaster.utils.LockUtils;
 import org.bukkit.ChatColor;
 import org.bukkit.Material;
@@ -27,10 +28,15 @@ public class MenuListeners implements Listener {
                 LockUtils.createNewLock(player, QuarterMaster.Locks_being_created.get(player));
                 player.closeInventory();
 
-
-
             }else if (e.getCurrentItem().getType().equals(Material.BARRIER)){
                 player.closeInventory();
+            }
+        } else if (e.getView().getTitle().equalsIgnoreCase(ChatColor.DARK_RED + "Your Locks:")){
+            e.setCancelled(true);
+            if (e.getCurrentItem().getType().equals(null)) {
+                return;
+            } else if (e.getCurrentItem().getType().equals(Material.CHEST)) {
+                GUIManager.openLockManagerGUI(player, LockUtils.getLock(GUIManager.getLocksListGUI().getItem(e.getSlot()).getItemMeta().getLore().get(7)));
             }
         }
     }

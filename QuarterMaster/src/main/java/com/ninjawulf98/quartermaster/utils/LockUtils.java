@@ -2,6 +2,7 @@ package com.ninjawulf98.quartermaster.utils;
 
 import com.ninjawulf98.quartermaster.QuarterMaster;
 import org.bson.Document;
+import org.bson.types.ObjectId;
 import org.bukkit.Bukkit;
 import org.bukkit.block.Block;
 import org.bukkit.entity.Player;
@@ -48,5 +49,21 @@ public class LockUtils {
         UUID uuid = UUID.fromString(uuidString);
 
         return Bukkit.getPlayer(uuid);
+    }
+
+    public static void deleteLock (Block block) {
+        int x = block.getX();
+        int y = block.getY();
+        int z = block.getZ();
+        Document filter = new Document("location", new Document("x", x).append("y", y).append("z", z));
+
+        QuarterMaster.getDatabaseCollection().deleteOne(filter);
+        System.out.println("Lock deleted");
+    }
+
+    public static Document getLock(String id) {
+        Document filter = new Document("_id", new ObjectId(id));
+
+        return QuarterMaster.getDatabaseCollection().find(filter).first();
     }
 }

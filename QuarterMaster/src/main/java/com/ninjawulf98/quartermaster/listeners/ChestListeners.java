@@ -34,10 +34,11 @@ public class ChestListeners implements Listener {
     public void breakChestListener(BlockBreakEvent e) {
         if (e.getBlock().getType().equals(Material.CHEST)){
             if (LockUtils.isCurrentlyLocked(e.getBlock())){
-                if (!e.getPlayer().equals(LockUtils.getWhoLocked(e.getBlock()))){
+                if (e.getPlayer().equals(LockUtils.getWhoLocked(e.getBlock()))){
+                   LockUtils.deleteLock(e.getBlock());
+                }else if (!e.getPlayer().equals(LockUtils.getWhoLocked(e.getBlock()))){
                     e.setCancelled(true);
-                    e.getPlayer().sendMessage(ChatColor.DARK_RED + "You do not own this ");
-                    e.getPlayer().sendMessage(ChatColor.DARK_RED + "That chest is locked by " + ChatColor.GRAY + LockUtils.getWhoLocked(e.getBlock()).getName());
+                    e.getPlayer().sendMessage(ChatColor.DARK_RED + "You do not own this chest. It can't be broken");
                 }
             }
         }
