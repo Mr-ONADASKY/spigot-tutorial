@@ -8,9 +8,9 @@ import com.ninjawulf98.quartermaster.commands.ListCommand;
 import com.ninjawulf98.quartermaster.commands.LockCommand;
 import com.ninjawulf98.quartermaster.listeners.MenuListeners;
 import com.ninjawulf98.quartermaster.listeners.ChestListeners;
+import com.ninjawulf98.quartermaster.utils.LockMenuSystem;
 import org.bson.Document;
 import org.bukkit.Bukkit;
-import org.bukkit.block.Block;
 import org.bukkit.entity.Player;
 import org.bukkit.plugin.java.JavaPlugin;
 
@@ -22,7 +22,7 @@ public final class QuarterMaster extends JavaPlugin {
     private MongoDatabase database;
     private static MongoCollection<Document> col;
 
-    public static HashMap<Player, Block> Locks_being_created = new HashMap<>();
+    public static HashMap<Player, LockMenuSystem> lockMenuSystemHashMap = new HashMap<>();
 
     @Override
     public void onEnable() {
@@ -45,5 +45,17 @@ public final class QuarterMaster extends JavaPlugin {
 
     public static MongoCollection<Document> getDatabaseCollection() {
         return col;
+    }
+
+    public static LockMenuSystem getPlayerMenuSystem(Player p) {
+
+        if(QuarterMaster.lockMenuSystemHashMap.containsKey(p)){
+            return lockMenuSystemHashMap.get(p);
+        } else {
+            LockMenuSystem lockMenuSystem = new LockMenuSystem(p);
+            lockMenuSystemHashMap.put(p, lockMenuSystem);
+
+            return lockMenuSystem;
+        }
     }
 }
