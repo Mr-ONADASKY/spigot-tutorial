@@ -1,6 +1,7 @@
+/Users/nick/Documents/spigot-tutorial/QuarterMaster/src/main/java/com/ninjawulf98/quartermaster/commands/ListCommand.java
 /Users/nick/Documents/spigot-tutorial/QuarterMaster/src/main/java/com/ninjawulf98/quartermaster/commands/LockCommand.java
+/Users/nick/Documents/spigot-tutorial/QuarterMaster/src/main/java/com/ninjawulf98/quartermaster/listeners/MenuListeners.java
+/Users/nick/Documents/spigot-tutorial/QuarterMaster/src/main/java/com/ninjawulf98/quartermaster/listeners/ChestListeners.java
 /Users/nick/Documents/spigot-tutorial/QuarterMaster/src/main/java/com/ninjawulf98/quartermaster/utils/LockUtils.java
 /Users/nick/Documents/spigot-tutorial/QuarterMaster/src/main/java/com/ninjawulf98/quartermaster/utils/GUIManager.java
-/Users/nick/Documents/spigot-tutorial/QuarterMaster/src/main/java/com/ninjawulf98/quartermaster/listeners/OpenChestListener.java
 /Users/nick/Documents/spigot-tutorial/QuarterMaster/src/main/java/com/ninjawulf98/quartermaster/QuarterMaster.java
-/Users/nick/Documents/spigot-tutorial/QuarterMaster/src/main/java/com/ninjawulf98/quartermaster/listeners/MenuListener.java

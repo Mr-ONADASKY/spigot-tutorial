@@ -7,9 +7,10 @@ import org.bukkit.block.Block;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.block.Action;
+import org.bukkit.event.block.BlockBreakEvent;
 import org.bukkit.event.player.PlayerInteractEvent;
 
-public class OpenChestListener implements Listener {
+public class ChestListeners implements Listener {
 
     @EventHandler
     public void openChestListener(PlayerInteractEvent event) {
@@ -24,6 +25,19 @@ public class OpenChestListener implements Listener {
                         event.setCancelled(true);
                         event.getPlayer().sendMessage(ChatColor.DARK_RED + "The chest is locked by " + LockUtils.getWhoLocked(block).getName());
                     }
+                }
+            }
+        }
+    }
+
+    @EventHandler
+    public void breakChestListener(BlockBreakEvent e) {
+        if (e.getBlock().getType().equals(Material.CHEST)){
+            if (LockUtils.isCurrentlyLocked(e.getBlock())){
+                if (!e.getPlayer().equals(LockUtils.getWhoLocked(e.getBlock()))){
+                    e.setCancelled(true);
+                    e.getPlayer().sendMessage(ChatColor.DARK_RED + "You do not own this ");
+                    e.getPlayer().sendMessage(ChatColor.DARK_RED + "That chest is locked by " + ChatColor.GRAY + LockUtils.getWhoLocked(e.getBlock()).getName());
                 }
             }
         }

@@ -4,9 +4,10 @@ import com.mongodb.client.MongoClient;
 import com.mongodb.client.MongoClients;
 import com.mongodb.client.MongoCollection;
 import com.mongodb.client.MongoDatabase;
+import com.ninjawulf98.quartermaster.commands.ListCommand;
 import com.ninjawulf98.quartermaster.commands.LockCommand;
-import com.ninjawulf98.quartermaster.listeners.MenuListener;
-import com.ninjawulf98.quartermaster.listeners.OpenChestListener;
+import com.ninjawulf98.quartermaster.listeners.MenuListeners;
+import com.ninjawulf98.quartermaster.listeners.ChestListeners;
 import org.bson.Document;
 import org.bukkit.Bukkit;
 import org.bukkit.block.Block;
@@ -32,8 +33,10 @@ public final class QuarterMaster extends JavaPlugin {
 
 
         getCommand("lock").setExecutor(new LockCommand());
-        Bukkit.getPluginManager().registerEvents(new MenuListener(), this);
-        Bukkit.getPluginManager().registerEvents(new OpenChestListener(), this);
+        getCommand("list").setExecutor(new ListCommand());
+
+        Bukkit.getPluginManager().registerEvents(new MenuListeners(), this);
+        Bukkit.getPluginManager().registerEvents(new ChestListeners(), this);
     }
 
     @Override
