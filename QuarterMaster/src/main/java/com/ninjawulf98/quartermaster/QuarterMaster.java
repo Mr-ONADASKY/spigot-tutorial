@@ -5,7 +5,8 @@ import com.mongodb.client.MongoClients;
 import com.mongodb.client.MongoCollection;
 import com.mongodb.client.MongoDatabase;
 import com.ninjawulf98.quartermaster.commands.LockCommand;
-import com.ninjawulf98.quartermaster.listeners.MenuListeners;
+import com.ninjawulf98.quartermaster.listeners.MenuListener;
+import com.ninjawulf98.quartermaster.listeners.OpenChestListener;
 import org.bson.Document;
 import org.bukkit.Bukkit;
 import org.bukkit.block.Block;
@@ -25,13 +26,14 @@ public final class QuarterMaster extends JavaPlugin {
     @Override
     public void onEnable() {
 
-        mongoClient = MongoClients.create("mongodb://f2fmarket:f2fmarket@localhost:27017");
+        mongoClient = MongoClients.create("mongodb://mongodb:mongodb@localhost:27017");
         database = mongoClient.getDatabase("quartermaster");
         col = database.getCollection("locks");
 
 
         getCommand("lock").setExecutor(new LockCommand());
-        Bukkit.getPluginManager().registerEvents(new MenuListeners(), this);
+        Bukkit.getPluginManager().registerEvents(new MenuListener(), this);
+        Bukkit.getPluginManager().registerEvents(new OpenChestListener(), this);
     }
 
     @Override

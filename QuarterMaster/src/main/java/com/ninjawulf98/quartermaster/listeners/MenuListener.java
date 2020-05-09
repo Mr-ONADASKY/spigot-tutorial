@@ -9,7 +9,7 @@ import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.inventory.InventoryClickEvent;
 
-public class MenuListeners implements Listener {
+public class MenuListener implements Listener {
 
     @EventHandler
     public void onMenuClick(InventoryClickEvent e){
@@ -25,6 +25,8 @@ public class MenuListeners implements Listener {
             if(e.getCurrentItem().getType().equals(Material.TOTEM_OF_UNDYING)){
                 player.sendMessage("Creating a new lock...");
                 LockUtils.createNewLock(player, QuarterMaster.Locks_being_created.get(player));
+                player.closeInventory();
+
 
 
             }else if (e.getCurrentItem().getType().equals(Material.BARRIER)){
