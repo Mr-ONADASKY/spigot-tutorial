@@ -1,0 +1,7 @@
+name: CommandManager
+version: 1.0-SNAPSHOT
+main: com.ninjawulf98.commandmanager.CommandManager
+api-version: 1.13
+commands:
+  prank:
+    description: Execute a prank
