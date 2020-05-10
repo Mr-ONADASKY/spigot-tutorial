@@ -56,9 +56,9 @@ public class LockMenuSystem {
         Document filter = new Document("uuid", uuid);
         QuarterMaster.getDatabaseCollection().find(filter).forEach((Consumer <Document>) document -> {
 
-            ItemStack lock = new ItemStack(Material.CHEST, 1);
+            ItemStack lock = new ItemStack(Material.valueOf(document.getString("type")), 1);
             ItemMeta lock_meta = lock.getItemMeta();
-            lock_meta.setDisplayName(ChatColor.GREEN + "Chest Lock");
+            lock_meta.setDisplayName(ChatColor.GREEN + document.getString("type") + " Lock");
 
             ArrayList<String> lore = new ArrayList<>();
             lore.add(ChatColor.GOLD + "-------------");

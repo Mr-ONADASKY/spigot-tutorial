@@ -1,7 +1,10 @@
+com/ninjawulf98/quartermaster/commands/CommandManager.class
+com/ninjawulf98/quartermaster/commands/subcommands/LockCommand.class
+com/ninjawulf98/quartermaster/commands/SubCommand.class
 com/ninjawulf98/quartermaster/listeners/MenuListeners.class
 com/ninjawulf98/quartermaster/utils/LockMenuSystem.class
 com/ninjawulf98/quartermaster/utils/LockUtils.class
+com/ninjawulf98/quartermaster/commands/subcommands/ManagerCommand.class
 com/ninjawulf98/quartermaster/QuarterMaster.class
-com/ninjawulf98/quartermaster/commands/LockCommand.class
-com/ninjawulf98/quartermaster/commands/ListCommand.class
+com/ninjawulf98/quartermaster/commands/subcommands/HelpCommand.class
 com/ninjawulf98/quartermaster/listeners/ChestListeners.class

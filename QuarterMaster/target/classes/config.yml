@@ -1,0 +1,18 @@
+###MongoDB Connection###
+connection-string: 'mongodb://mongodb:mongodb@localhost:27017'
+database: 'quartermaster'
+
+#Provide a material name for the blocks you want to be lockable
+lockable-blocks:
+  - CHEST
+  - TRAPPED_CHEST
+  - BLAST_FURNACE
+  - FURNACE
+  - HOPPER
+  - ENDER_CHEST
+  - ACACIA_DOOR
+  - BIRCH_DOOR
+  - DARK_OAK_DOOR
+  - JUNGLE_DOOR
+  - OAK_DOOR
+  - SPRUCE_DOOR

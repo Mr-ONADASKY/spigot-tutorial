@@ -4,8 +4,7 @@ import com.mongodb.client.MongoClient;
 import com.mongodb.client.MongoClients;
 import com.mongodb.client.MongoCollection;
 import com.mongodb.client.MongoDatabase;
-import com.ninjawulf98.quartermaster.commands.ListCommand;
-import com.ninjawulf98.quartermaster.commands.LockCommand;
+import com.ninjawulf98.quartermaster.commands.CommandManager;
 import com.ninjawulf98.quartermaster.listeners.MenuListeners;
 import com.ninjawulf98.quartermaster.listeners.ChestListeners;
 import com.ninjawulf98.quartermaster.utils.LockMenuSystem;
@@ -18,6 +17,8 @@ import java.util.HashMap;
 
 public final class QuarterMaster extends JavaPlugin {
 
+    private static QuarterMaster plugin;
+
     private MongoClient mongoClient;
     private MongoDatabase database;
     private static MongoCollection<Document> col;
@@ -27,16 +28,27 @@ public final class QuarterMaster extends JavaPlugin {
     @Override
     public void onEnable() {
 
-        mongoClient = MongoClients.create("mongodb://mongodb:mongodb@localhost:27017");
-        database = mongoClient.getDatabase("quartermaster");
-        col = database.getCollection("locks");
+        plugin = this;
+        //Setup config
+        getConfig().options().copyDefaults();
+        saveDefaultConfig();
+
+        if(getConfig().getString("connection-string").isEmpty()){
+            System.out.println("[QuarterMaster] - You need to specify a mongodb connection string in the config.ym;");
+
+        }else {
+            mongoClient = MongoClients.create(getConfig().getString("connection-string"));
+            database = mongoClient.getDatabase(getConfig().getString("database"));
+            col = database.getCollection("locks");
 
 
-        getCommand("lock").setExecutor(new LockCommand());
-        getCommand("list").setExecutor(new ListCommand());
+            getCommand("quartermaster").setExecutor(new CommandManager());
 
-        Bukkit.getPluginManager().registerEvents(new MenuListeners(), this);
-        Bukkit.getPluginManager().registerEvents(new ChestListeners(), this);
+            Bukkit.getPluginManager().registerEvents(new MenuListeners(), this);
+            Bukkit.getPluginManager().registerEvents(new ChestListeners(), this);
+        }
+
+
     }
 
     @Override
@@ -57,5 +69,9 @@ public final class QuarterMaster extends JavaPlugin {
 
             return lockMenuSystem;
         }
+    }
+
+    public static  QuarterMaster getPlugin() {
+        return plugin;
     }
 }

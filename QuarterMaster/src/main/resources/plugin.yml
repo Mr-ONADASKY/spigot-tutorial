@@ -3,7 +3,7 @@ version: ${project.version}
 main: com.ninjawulf98.quartermaster.QuarterMaster
 api-version: 1.13
 commands:
-  lock:
-    description: Lock a chest
-  list:
-    description: View your locks
+  quartermaster:
+    description: Manage and usee the QuarterMaster plugin
+    aliases:
+      - qm

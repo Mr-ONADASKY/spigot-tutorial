@@ -13,13 +13,14 @@ import org.bukkit.inventory.ItemStack;
 import javax.print.Doc;
 import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 import java.util.UUID;
 
 public class LockUtils {
 
     public static void createNewLock(Player player, Block block) {
         Document lock = new Document("uuid", player.getUniqueId().toString())
-                .append("type", "chest")
+                .append("type", block.getType().toString())
                 .append("location",
                         new Document("x", block.getX())
                                 .append("y", block.getY())
@@ -111,5 +112,10 @@ public class LockUtils {
         Document filter = new Document("_id", lock.getObjectId("_id"));
         QuarterMaster.getDatabaseCollection().updateOne(filter, newDoc2);
 
+    }
+
+
+    public static List<String> getLockableBlocks() {
+        return  QuarterMaster.getPlugin().getConfig().getStringList("lockable-blocks");
     }
 }

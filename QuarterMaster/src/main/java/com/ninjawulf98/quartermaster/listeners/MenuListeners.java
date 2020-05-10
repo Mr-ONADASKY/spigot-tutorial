@@ -18,10 +18,9 @@ public class MenuListeners implements Listener {
         Player p = (Player) e.getWhoClicked();
 
         LockMenuSystem lockMenuSystem = QuarterMaster.getPlayerMenuSystem(p);;
-        e.setCancelled(true);
 
         if (e.getView().getTitle().equalsIgnoreCase(ChatColor.DARK_AQUA + "Lock chest?")){
-
+            e.setCancelled(true);
             if (e.getCurrentItem() == null) {
                 return;
             }
@@ -36,6 +35,8 @@ public class MenuListeners implements Listener {
                 p.closeInventory();
             }
         } else if (e.getView().getTitle().equalsIgnoreCase(ChatColor.DARK_RED + "Your Locks:")){
+            e.setCancelled(true);
+
             if (e.getCurrentItem().getType().equals(null)) {
 
                 return;
@@ -44,6 +45,8 @@ public class MenuListeners implements Listener {
                 lockMenuSystem.showLockManagerGUI();
             }
         }else if(e.getView().getTitle().equalsIgnoreCase(ChatColor.GOLD + "Lock Manager")) {
+            e.setCancelled(true);
+
             if(e.getCurrentItem().getType().equals(Material.BARRIER)){
                 lockMenuSystem.showLocksListGUI();
             }else if(e.getCurrentItem().getType().equals(Material.WITHER_ROSE)){
@@ -52,6 +55,8 @@ public class MenuListeners implements Listener {
                 lockMenuSystem.showAccessManagerMenu();
             }
         }else if (e.getView().getTitle().equalsIgnoreCase(ChatColor.RED + "Confirm: Delete lock?")) {
+            e.setCancelled(true);
+
             if(e.getCurrentItem().getType().equals(Material.BARRIER)) {
                 lockMenuSystem.showLocksListGUI();
             }else if(e.getCurrentItem().getType().equals(Material.EMERALD)){
@@ -62,6 +67,8 @@ public class MenuListeners implements Listener {
                 lockMenuSystem.showLocksListGUI();
             }
         }else if(e.getView().getTitle().equalsIgnoreCase(ChatColor.GREEN + "Access Manager")) {
+            e.setCancelled(true);
+
             if(e.getCurrentItem().getType().equals(Material.BARRIER)){
                 lockMenuSystem.showLockManagerGUI();
             } else if(e.getCurrentItem().getType().equals(Material.PLAYER_HEAD)){
@@ -72,6 +79,8 @@ public class MenuListeners implements Listener {
                 lockMenuSystem.showPlayersToRemoveMenu();
             }
         }else if(e.getView().getTitle().equalsIgnoreCase(ChatColor.GREEN + "Choose a Player to Add:")) {
+            e.setCancelled(true);
+
             if (e.getCurrentItem().getType().equals(Material.PLAYER_HEAD)) {
                 lockMenuSystem.showConfirmAddPlayerMenu();
                 lockMenuSystem.setPlayerToAdd(Bukkit.getPlayer(e.getCurrentItem().getItemMeta().getDisplayName()));
@@ -80,10 +89,14 @@ public class MenuListeners implements Listener {
             }
 
         }else if(e.getView().getTitle().equalsIgnoreCase(ChatColor.YELLOW + "Players with Access to Lock")){
+            e.setCancelled(true);
+
             if (e.getCurrentItem().getType().equals(Material.BARRIER)){
                 lockMenuSystem.showAccessManagerMenu();
             }
         }else if(e.getView().getTitle().equalsIgnoreCase(ChatColor.YELLOW  + "Choose a player to remove")){
+            e.setCancelled(true);
+
             if (e.getCurrentItem().getType().equals(Material.PLAYER_HEAD)){
                 lockMenuSystem.showConfirmRemovePlayerMenu();
 
@@ -92,6 +105,8 @@ public class MenuListeners implements Listener {
                 lockMenuSystem.showAccessManagerMenu();
             }
         }else if(e.getView().getTitle().equalsIgnoreCase(ChatColor.GREEN + "Confirm: Add Player")) {
+            e.setCancelled(true);
+
             if (e.getCurrentItem().getType().equals(Material.BARRIER)){
                 lockMenuSystem.showAccessManagerMenu();
             }else if(e.getCurrentItem().getType().equals(Material.EMERALD)){
@@ -103,6 +118,8 @@ public class MenuListeners implements Listener {
                 lockMenuSystem.showAccessManagerMenu();
             }
         }else if(e.getView().getTitle().equalsIgnoreCase(ChatColor.RED + "Confirm: Remove Player")) {
+            e.setCancelled(true);
+
             if (e.getCurrentItem().getType().equals(Material.BARRIER)){
                 lockMenuSystem.showAccessManagerMenu();
             }else if(e.getCurrentItem().getType().equals(Material.EMERALD)){

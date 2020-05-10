@@ -1,28 +1,40 @@
-package com.ninjawulf98.quartermaster.commands;
+package com.ninjawulf98.quartermaster.commands.subcommands;
 
 import com.ninjawulf98.quartermaster.QuarterMaster;
+import com.ninjawulf98.quartermaster.commands.SubCommand;
 import com.ninjawulf98.quartermaster.utils.LockMenuSystem;
 import com.ninjawulf98.quartermaster.utils.LockUtils;
 import org.bukkit.ChatColor;
 import org.bukkit.Material;
 import org.bukkit.block.Block;
-import org.bukkit.command.Command;
-import org.bukkit.command.CommandExecutor;
-import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 
-public class LockCommand implements CommandExecutor {
+public class LockCommand extends SubCommand {
 
     @Override
-    public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
+    public String getName() {
+        return "lock";
+    }
 
-        if(sender instanceof Player) {
-            Player p = (Player) sender;
-            Block target;
+    @Override
+    public String getDescription() {
+        return "Allows you to lock a block";
+    }
 
-            if (p.getTargetBlockExact(5) !=  null){
-                target = p.getTargetBlockExact(5);
-                if(target.getType().equals(Material.CHEST)){
+    @Override
+    public String getSyntax() {
+        return "/qm lock";
+    }
+
+    @Override
+    public void perform(Player p, String[] args) {
+        Block target;
+
+        if (p.getTargetBlockExact(5) !=  null){
+            target = p.getTargetBlockExact(5);
+
+            for(String lockableBlock: LockUtils.getLockableBlocks()){
+                if(target.getType().equals(Material.valueOf(lockableBlock))){
                     if(LockUtils.isCurrentlyLocked(target)){
                         if(LockUtils.getWhoLocked(target).equals(p)){
                             p.sendMessage(ChatColor.BLUE + "You already own this chest. It's locked. ");
@@ -40,8 +52,8 @@ public class LockCommand implements CommandExecutor {
 
                 }
             }
+        }else if (p.getTargetBlockExact(5) == null){
+            p.sendMessage(ChatColor.GRAY + "Look at something nearby");
         }
-
-        return true;
     }
 }
