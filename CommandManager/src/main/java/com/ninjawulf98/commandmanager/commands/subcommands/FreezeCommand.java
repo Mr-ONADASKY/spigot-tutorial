@@ -4,6 +4,8 @@ import com.ninjawulf98.commandmanager.commands.SubCommand;
 import org.bukkit.Bukkit;
 import org.bukkit.entity.Player;
 
+import java.util.List;
+
 public class FreezeCommand extends SubCommand {
     @Override
     public String getName() {
@@ -33,5 +35,10 @@ public class FreezeCommand extends SubCommand {
             player.sendMessage("You did not provide a name!");
             player.sendMessage("Do it like this: /prank freeze ninjawulf98");
         }
+    }
+
+    @Override
+    public List<String> getSubcommandArguments(Player player, String[] args) {
+        return null;
     }
 }

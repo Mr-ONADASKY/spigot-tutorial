@@ -3,13 +3,14 @@ package com.ninjawulf98.commandmanager.commands;
 import com.ninjawulf98.commandmanager.commands.subcommands.ExplodeCommand;
 import com.ninjawulf98.commandmanager.commands.subcommands.FreezeCommand;
 import org.bukkit.command.Command;
-import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
+import org.bukkit.command.TabExecutor;
 import org.bukkit.entity.Player;
 
 import java.util.ArrayList;
+import java.util.List;
 
-public class PrankManager implements CommandExecutor {
+public class PrankManager implements TabExecutor {
 
     private ArrayList<SubCommand> subCommands = new ArrayList<>();
 
@@ -45,5 +46,27 @@ public class PrankManager implements CommandExecutor {
 
     public ArrayList<SubCommand> getSubCommands() {
         return subCommands;
+    }
+
+    @Override
+    public List<String> onTabComplete(CommandSender sender, Command command, String alias, String[] args) {
+
+        if(args.length == 1){
+            ArrayList<String> subcommandsArguments = new ArrayList<>();
+
+            for(SubCommand subCommand: subCommands) {
+                subcommandsArguments.add(subCommand.getName());
+            }
+
+            return subcommandsArguments;
+        }else if(args.length == 2){
+            for(SubCommand subCommand: subCommands) {
+                if(args[0].equalsIgnoreCase(subCommand.getName())){
+                   return subCommand.getSubcommandArguments((Player) sender, args);
+                }
+            }
+        }
+
+        return null;
     }
 }

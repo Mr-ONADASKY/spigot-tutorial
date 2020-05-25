@@ -1,0 +1,7 @@
+name: TabAutoCompletion
+version: 1.0-SNAPSHOT
+main: com.ninjawulf98.tabautocompletion.TabAutoCompletion
+api-version: 1.13
+commands:
+  murder:
+    description: Kill someone

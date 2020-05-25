@@ -5,6 +5,9 @@ import org.bukkit.Bukkit;
 import org.bukkit.Sound;
 import org.bukkit.entity.Player;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class ExplodeCommand extends SubCommand {
 
     @Override
@@ -37,5 +40,22 @@ public class ExplodeCommand extends SubCommand {
             player.sendMessage("You did not provide a name!");
             player.sendMessage("Do it like this: /prank explode ninjawulf98");
         }
+    }
+
+    @Override
+    public List<String> getSubcommandArguments(Player player, String[] args) {
+        if(args.length == 2){
+            ArrayList<String> playerNames = new ArrayList<>();
+            Player[] players = new Player[Bukkit.getServer().getOnlinePlayers().size()];
+            Bukkit.getServer().getOnlinePlayers().toArray(players);
+            for(Player _player: players){
+                playerNames.add(_player.getName());
+            }
+
+            return playerNames;
+        }
+
+        return null;
+
     }
 }
